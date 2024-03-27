@@ -4,3 +4,9 @@
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+
+let myNumber = 27; 
+console.log(myNumber); 
+
+// 27
+

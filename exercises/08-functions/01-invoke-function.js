@@ -14,4 +14,6 @@ const calculateTotal = (subtotal, tax) => {
  * You will need to pass in arguments to  "calculateTotal".
  */
 
-// WRITE YOUR ANSWER BELOW THIS LINE
+// WRITE YOUR ANSWER BELOW THIS()
+
+let total = calculateTotal(50, 0.02);

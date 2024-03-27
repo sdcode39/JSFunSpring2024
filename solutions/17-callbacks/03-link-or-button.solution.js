@@ -28,7 +28,7 @@ const createCallToAction = (clickableText, callback) => {
 
 
 // CHANGE SOMETHING HERE TOO so that creates a link
-createCallToAction("Book Now", createLink);
+console.log(createCallToAction("Book Now", createLink));
 
 // IGNORE THIS BELOW. It is for the tests.
 

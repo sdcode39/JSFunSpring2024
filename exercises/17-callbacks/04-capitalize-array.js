@@ -18,13 +18,20 @@ const capitalizeString = (str) => {
  * const capitalizeString = (str) => str.toUpperCase();
  * const result = capitalizeArray(['hello', 'world'], capitalizeString); // ['HELLO', 'WORLD']
  *
- * @param {array} originalArray
- * @param {function} callback
- * @returns {array}
+ * //@param {array} originalArray
+ * //@param {function} callback
+ * //@returns {array}
  */
 const capitalizeArray = (originalArray, callback) => {
   // WRITE YOUR ANSWER IN HERE
+  let result = [];
+  for (let i = 0; i < originalArray.length; i++) {
+    let capitalizedStr = callback(originalArray[i]);
+    result.push(capitalizedStr);
+  }
+  return result;
 };
+
 
 // Uncomment me to test your answer in Quokka
 // const result = capitalizeArray(['hello', 'world'], capitalizeString);

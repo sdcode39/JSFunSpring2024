@@ -22,8 +22,9 @@ const createCallToAction = (clickableText) => {
   // CHANGE SOMETHING INSIDE THIS FUNCTION
   return (
     "<div>Limited Time: Members Save 30%<br>" +
-    createLink(clickableText) +
+     callback(clickableText) +
     "</div>"
+
   );
 };
 

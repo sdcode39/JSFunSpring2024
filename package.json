@@ -10,11 +10,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AlbanyCanCodeCourses/JSFunSpring2024#readme"
+    "url": "git+https://github.com/AlbanyCanCodeCourses/JSFunSpring2024.git#readme"
   },
   "dependencies": {
     "chai": "^5.0.3",
     "mocha": "^10.3.0",
+    "readline-sync": "^1.4.10",
     "sinon": "^17.0.1"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/AlbanyCanCodeCourses/JSFunSpring2024/issues"
+  },
+  "homepage": "https://github.com/AlbanyCanCodeCourses/JSFunSpring2024/tree/readme#readme",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "keywords": [],
+  "license": "ISC"
 }

@@ -11,3 +11,15 @@ let string = "racecar";
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+
+
+let isPalindrome;
+let letters = string.split("");
+let reverse = "";
+for (let letter of letters) {
+  reverse = letter + reverse;
+}
+if (reverse === string) {
+  isPalindrome = true;
+}
+isPalindrome = false;

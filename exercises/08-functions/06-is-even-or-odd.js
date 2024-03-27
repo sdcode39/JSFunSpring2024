@@ -12,3 +12,13 @@
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+
+const isEvenOrOdd = (num) => {
+    // If it has a remainder of 2, then the number is even.
+    if (num % 2 === 0) {
+      return "even";
+    } else {
+      return "odd";
+    }
+  };
+  

@@ -8,3 +8,9 @@ let num = 8; // e.g.
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+
+let isEven = false;
+if (num % 2 === 0) {
+  isEven = true;
+}
+

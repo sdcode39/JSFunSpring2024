@@ -24,8 +24,15 @@ const doubleNumber = (num) => {
  * @returns {array}
  */
 
-const doubleArray = (originalArray, doubleNumber) => {
+const doubleArray = (originalArray, callback) => {
+  const result =[];
+  for (let i = 0; i < originalArray.length; i++){
+  const doubledNum = callback (originalArray[i]);
+  result.push(doubledNum);
+  }
+  return result;
   // WRITE YOUR ANSWER IN HERE
+
 };
 
 // Uncomment me to test your answer in Quokka

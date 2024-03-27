@@ -1,0 +1,66 @@
+body {
+    background-color: lightskyblue;
+    color: rgba(21, 54, 218, 0.874);
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+
+h1 {
+    font-size: 220%;
+    font-style: bold;
+    
+}
+
+.align {
+    display: flex;
+    flex-direction:column;
+   
+}
+
+.align1 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.align2 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: rgb(217, 217, 14);
+}
+
+
+.align3 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+h2 {
+    font-size: 170%;
+}
+
+h3 {
+    font-size: 160%;
+}
+
+img {
+   align-self: center;
+   border-radius: 20%;
+   border: 2px, black;
+}
+
+
+h4 {
+    font-size: 140%;
+    align-self: center;
+}
+

@@ -10,3 +10,17 @@
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+
+const countNumberOfDigits = (num) => {
+    // I'm first converting this to a string
+    let str = `${num}`;
+  
+    // BONUS
+    // And removing the decimal point
+    str = str.replace(".", "");
+    // And any negative signs
+    str = str.replace("-", "");
+  
+    // And now I'm counting tbe number of numbers
+    return str.length;
+  };

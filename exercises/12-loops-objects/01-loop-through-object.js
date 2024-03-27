@@ -17,3 +17,9 @@ const links = {
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+
+let html = "";
+for (let text in links) {
+  const href = links[text];
+  html = html + '<a href="' + href + '">' + text + "</a>";
+}
