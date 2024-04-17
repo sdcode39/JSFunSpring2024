@@ -10,5 +10,11 @@ const numbers = [1, 10, -2, 3, 4]; // e.g.
 
 // WRITE YOUR ANSWER BELOW THIS LINE
 
+const findLowestNumber = (num) => {
+    if (num < lowestNumber){
+        lowestNumber = num;
+    }
+};
+
 numbers.forEach(lowestNumber);
 
