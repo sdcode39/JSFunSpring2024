@@ -12,4 +12,25 @@
  */
 (function () {
   // Put your answers in here
+  const firstLi = document.querySelector("li");
+  console.log("firstLi", firstLi);
+
+  const myId = document.querySelector("#myId");
+  console.log("myId", myId);
+
+  const allLi = document.querySelectorAll("li");
+  allLi.forEach((li) => {
+    console.log(allLi, li);
+
+    const allBgWarning = document.querySelectorAll(".bg-warning", li);
+  });
+
+  const targetButton = document.querySelector("#targetButton");
+  console.log(targetButton);
+
+  const targetLinks = document.querySelectorAll(".target=link");
+  targetLinks.forEach((link) => console.log(link));
+
+  const cells = document.querySelectorAll("#myRow > .col");
+  cells.forEach((cell) => console.log("cell",cell));
 })();
