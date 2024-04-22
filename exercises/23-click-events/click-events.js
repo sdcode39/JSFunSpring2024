@@ -9,12 +9,26 @@
    * @see https://developer.mozilla.org/en-US/docs/Web/API/Window/alert
    */
   // Write your answer here
+  const alertButton = document.querySelector("#alertMe");
+
+  alertButton.addEventListener("click", () => {
+    alert("Alert Me!");
+  });
   /**
    * Problem 2: Disable a button that will charge a credit card.
    *
    * To prevent users from charging the credit card more than once:
    * 1. Disable the button when it is clicked.
    * 2. Change the text to say e.g. "Loading ..." once it is clicked.
-   */
-  // Write your answer here
+   
+   */  // Write your answer here
+   const chargeButton = document.querySelector("#chargeCreditCard");
+  chargeButton.type = "submit";
+
+  const reactToCharge = () => {
+  
+  chargeButton.disabled = "disabled";
+  chargeButton.textContent = "Loading ...";
+  };
+  chargeButton.addEventListener("click", reactToCharge);
 })();

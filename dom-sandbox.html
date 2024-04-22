@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Sandbox</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <style>
+      .hidden {
+        display: none;
+      }
+      .input-group-append {
+
+      }
+      /* #alert {
+        background-color: black;
+      } */
+      a {
+        background-color: black;
+      }
+    </style>
+    <script src="dom-sandbox.js" defer></script>
+  </head>
+
+  <body class="container">
+    <h1>Learning about the DOM today</h1>
+    <p id="maroon">
+      The first paragraph. Lorem ipsum dolor sit amet consectetur adipisicing
+      elit. Sequi natus repellat unde, eveniet nostrum iure officiis, rerum eius
+      error, quas placeat quia consectetur cumque ab ad mollitia eligendi
+      laboriosam necessitatibus.
+    </p>
+
+    <a href="/about.html" id="about-link">About</a> |
+    <a href="https://www.google.com/" id="target-me-link">Google</a>
+    <hr />
+    <div class="mb-2">
+      <input id="email" type="email" class="form-control" placeholder="Email" />
+    </div>
+    <div class="input-group mb-2">
+      <input
+        id="password"
+        type="password"
+        class="form-control"
+        aria-label="Password"
+        placeholder="Password"
+      />
+      <div class="input-group-append">
+        <button id="button" class="btn btn-outline-secondary" type="submit">
+          Show Password
+        </button>
+      </div>
+    </div>
+    <script>
+    
+        const inputPractice = document.querySelector("#email");
+        // Enter JavaScript
+        console.log(inputPractice);
+        
+    
+    </script>
+    
+  </body>
+</html>
