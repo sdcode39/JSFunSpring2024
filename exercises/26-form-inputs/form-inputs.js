@@ -13,6 +13,16 @@
    * (See the comments in the HTML for what <span> tags to sue.)
    */
   // Write your answer here
+  const name = document.querySelector('#name');
+  name.addEventListener('input', (event) => {
+    // How can I read the input the user types into the textbox?
+    console.log(event.target.value);
+  });
+  const department = document.querySelector('#department');
+  department.addEventListener('change', (event) => {
+    // How can I read the what the user selected from th selectbox?
+    console.log(event.target.value);
+  });
   /**
    * Problem 2: Handle a checkbox
    *
