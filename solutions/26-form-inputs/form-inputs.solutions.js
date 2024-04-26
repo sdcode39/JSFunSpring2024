@@ -28,7 +28,7 @@
   };
 
   // STEP 2: React to an event
-  displayEmail = email.addEventListener("input", handleEmailInput);
+ const displayEmail = email.addEventListener("input", handleEmailInput);
 
   // Example 2: TITLE / ROLE DROPDOWN
 

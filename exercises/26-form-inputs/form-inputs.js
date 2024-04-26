@@ -13,16 +13,24 @@
    * (See the comments in the HTML for what <span> tags to sue.)
    */
   // Write your answer here
-  const name = document.querySelector('#name');
-  name.addEventListener('input', (event) => {
+  const email = document.querySelector('#email');
+  const emailDisplay = document.querySelector("#emailDisplay");
+  
     // How can I read the input the user types into the textbox?
-    console.log(event.target.value);
-  });
-  const department = document.querySelector('#department');
-  department.addEventListener('change', (event) => {
+    const handleEmailInput = (event) => {
+      const whatTheUserIsTyping = event.target.value;
+
+      emailDisplay.textContent = whatTheUserIsTyping;
+        };
+
     // How can I read the what the user selected from th selectbox?
-    console.log(event.target.value);
-  });
+    const displayEmail = email.addEventListener("input", handleEmailInput);
+
+    document.querySelector("#title").addEventListener("change", (event) => {
+      const whatTheUserSelected = event.target.value;
+
+      document.querySelector("#titleDisplay").textContent = whatTheUserSelected;
+    });
   /**
    * Problem 2: Handle a checkbox
    *
@@ -33,6 +41,17 @@
    * As a bonus, see if you can hide the <div> tag if they uncheck the checkbox.
    */
   // Write your answer here.
+  const promotions = document.querySelector("#shouldSendPromotions");
+  const promotionDisplay = document.querySelector("#promotionDisplay");
+   displayEmail = promotions.addEventListener("change", (event) => {
+    const isChecked = event.target.value;
+
+    if (isChecked) {
+      promotionDisplay.classList.remove("hidden");
+    } else {
+      promotionDisplay.classList.add("hidden");
+    }
+  });
   /**
    * Problem 3: Input validation
    *
@@ -45,4 +64,17 @@
    * is to use "blur" events for these types of error messages (form validation errors).
    */
   // Write your answer here
+  const emailError = document.querySelector("#emailError");
+
+  const handleBlur = (event) => {
+    const textInEmailTextbox = event.target.value;
+
+    if(textInEmailTextbox) {
+      emailError.emailError.display = "none";
+    } else {
+      emailError.style.display = "block";
+    }
+  };
+
+  email.addEventListener("blur", handleBlur);
 })();

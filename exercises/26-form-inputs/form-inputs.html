@@ -47,7 +47,7 @@
 
             <!-- Show me if the email address is empty.
               You can use the CSS property "display: block" to do this. -->
-            <div class="invalid-feedback">Please enter email address.</div>
+            <div id = "emailError" class="invalid-feedback">Please enter email address.</div>
           </div>
 
           <!-- Role or title-->
@@ -92,17 +92,17 @@
             <div class="mb-3">
               Email:
               <!-- Insert email address in this <span> here -->
-              <span></span>
+              <span id ="emailDisplay"></span>
             </div>
 
             <div class="mb-3">
               Title or Role:
               <!-- Insert title in this <span> here -->
-              <span></span>
+              <span id = "titileDisplay"></span>
             </div>
 
             <!-- This is hidden. Display this by removing the "hidden" class -->
-            <div class="hidden">✓ Include promotional offers</div>
+            <div id ="promotionDisplay" class="hidden">✓ Include promotional offers</div>
           </div>
         </div>
       </div>
