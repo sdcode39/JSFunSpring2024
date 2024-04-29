@@ -6,7 +6,7 @@
    * @see creating-elements.png
    *
    * You may modify the HTML.
-   *
+   
    * Before completing this exercise, I recommend you take a look
    * at the solutions for the "Data Structures" exercise. See the solutions folder.
    */
@@ -30,6 +30,14 @@
      */
 
     // Write you JavaScript here
+    const results = document.createElement("div");
+    //add text
+    results.textContent = `No results for ${ocean} found.`;
+    //add classes
+    results.classList.add("italic");
+    //add to page
+    const parent = document.querySelector("#searchEngine");
+    parent.appendChild(results);
   };
 
   document
@@ -58,9 +66,9 @@
    */
 
   // Update me
-  const movieHtml = `<img src="_____" />
+  const movieHtml = `<img src="${movie.imgSrc}" />
   <div class="flex-auto my-4">
-    <h1 class="text-2xl mb-4">_____ <small>(_____)</small></h1>
+    <h1 class="text-2xl mb-4">${movie.title} <small>(${movie.year})</small></h1>
     <p clas="mb-4">
       ${movie.description}
     </p>
@@ -73,6 +81,7 @@
    */
 
   // Write you JavaScript here
+  document.querySelector("#movie").innerHTML = movieHtml;
 
   /**
    * Problem 3: Create a ChatGPT conversation from an array of objects
@@ -120,4 +129,15 @@
    */
 
   // Write you JavaScript here
+  const conversation = document.querySelector("#converstaion");
+
+  conversationDialogues.forEach((dialogue) => {
+    let conversationHtml = `<div class = "border-solid border-2 border-slate-200 rounded p-2 mb-4">
+      <div class = "front-bold">${dialogue.author}</div> 
+      <p>
+      ${dialogue.message}
+      </p>
+      </div>`;
+      conversation.insertAdjacentHTML("beforeEnd", conversationHtml);
+  });
 })();
