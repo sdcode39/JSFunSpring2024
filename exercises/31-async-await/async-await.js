@@ -8,4 +8,11 @@
    * This is the API you will be using. The method will be GET.
    * https://ron-swanson-quotes.herokuapp.com/v2/quotes
    */
-})();
+
+  const button = async () => {
+    let response = await 
+    axios.get(" https://ron-swanson-quotes.herokuapp.com/v2/quotes");
+    let data = response.data.data;
+    console.log(data);
+  
+  })
