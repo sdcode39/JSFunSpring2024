@@ -9,10 +9,14 @@
    * https://ron-swanson-quotes.herokuapp.com/v2/quotes
    */
 
-  const button = async () => {
-    let response = await 
-    axios.get(" https://ron-swanson-quotes.herokuapp.com/v2/quotes");
-    let data = response.data.data;
-    console.log(data);
+  const quote = document.querySelector("#quote");
+  const getData = async () => {
+    
+    const response = await axios.get(" https://ron-swanson-quotes.herokuapp.com/v2/quotes");
   
-  })
+    quote.textContent = response.data[0];
+  };
+
+  const button = document.querySelector
+  ("button");
+  button.addEventListener("click", getData);
