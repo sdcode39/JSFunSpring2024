@@ -23,8 +23,8 @@
   try {
     // Getting the list of characters
     const response = await axios.get(
-      "https://rickandmortyapi.com/api/character/"
-    );
+      "https://rickandmortyapi.com/api/character/");
+
     const characters = response.data.results;
     characters.forEach((character) => {
       /**
@@ -32,7 +32,8 @@
        * @example <option value="2">Morty Smith</option>
        */
       const option = document.createElement("option");
-      option.value = character.id; // I'm going to use this when I lookup when character the user selects
+      option.value = character.id; 
+      // I'm going to use this when I lookup when character the user selects//
       option.textContent = character.name;
       // Adding the <option> to the dropdown
       dropdown.appendChild(option);

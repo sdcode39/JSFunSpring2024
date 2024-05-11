@@ -1,8 +1,9 @@
-(function () {
+(async function () {
   /**
    *
    * As a user, I should be able to a pick Rick and Morty character from a drop-down, and it should display an image of that character.
    *
+  
    * For this exercise, use the API to populate the dropdown.
    * After the dropdown has been populated, if the user selects a character an image should appear displaying the correct character.
    *
@@ -17,4 +18,47 @@
    *
    * You must make two AJAX request to solve this problem.
    */
+  const dropdown = document.querySelector("#dropdown");
+
+  try {
+    //Getting list of characters
+    const response = await axios.get(
+      "https:rickandmortyapi.com/api/character");
+      const characters = response.data.results;
+      characters.forEach((character) =>
+      /* 
+      * Building this HTML, where the value is the character's ID */
+     const option = document.createElement("option");
+     option.value = character.id;
+     //going to use this when I lookup what character the user selects//
+     option.textContent = character.name;
+     //adding the <option> to the dropdown//
+     dropdown.appendChild(option);
+  });
+
+    const getCharacterDetails = async (id) =>{
+      const response = await axios({
+        method: "GET",
+      //To get details about a single character,
+      // the API has you plug-in the ID into the URL
+      url: `https://rickandmortyapi.com/api/character/${id}`,
+    });
+
+    const character = response.data;
+
+    // Adding the character's name and image to the page//
+
+    document.querySelector("#title-head").textContent = character.name;
+    document.querySelector("#get-schwifty").src = character.image;
+};
+
+   dropdown.addEventListener("change", (e) => {
+// getting the character's id from the //value in *@example <option value="2">Morty Smith</option>//
+   const id = e.target.value;
+   getCharacterDetails(id);
+});
+} catch (err) {
+  console.error(err);
+  //usually you should display an error message on the screen//
+}
 })();

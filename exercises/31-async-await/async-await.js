@@ -13,12 +13,18 @@
 
   const getData = async () => {
     
-    const response = await axios.get(" https://ron-swanson-quotes.herokuapp.com/v2/quotes");
+    const response = await axios.get("https://ron-swanson-quotes.herokuapp.com/v2/quotes");
   
     quote.textContent = response.data[0];
-  };
 
-  const button = document.querySelector
-  ("button");
+    //error handling
+  } catch (err) {
+
+    console.error(err);
+
+    quote.textContent = "Sorry, an unexprected error has occurred";
+  }
+};
+  const button = document.querySelector("button");
   button.addEventListener("click", getData);
-});
+);
