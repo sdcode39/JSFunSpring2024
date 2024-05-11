@@ -10,6 +10,7 @@
    */
 
   const quote = document.querySelector("#quote");
+
   const getData = async () => {
     
     const response = await axios.get(" https://ron-swanson-quotes.herokuapp.com/v2/quotes");
@@ -20,3 +21,4 @@
   const button = document.querySelector
   ("button");
   button.addEventListener("click", getData);
+});
